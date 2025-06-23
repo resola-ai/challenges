@@ -63,7 +63,7 @@ If you have questions about a specific challenge, please refer to the README in 
 | [Puma](puma/README.md) | QA/Testing Engineer | **API Testing with Postman** - Develop comprehensive Postman tests for the Fake Store API, including functional, performance, and security testing. | 2-3 days |
 | [Ocelot](ocelot/README.md) | Backend Developer | **Audit Log API** - Build a high-performance audit logging system with search, filtering, real-time streaming, and data retention policies. | 3-5 days |
 | [Felix](felix/README.md) | Cloud Security Engineer | **Twenty CRM Security & Penetration Testing** - Deploy Twenty CRM using Docker Compose in AWS and conduct comprehensive penetration testing using tools like Burp Suite, OWASP ZAP, or custom scripts. | 3-5 days |
-| [Pardus](pardus/README.md) | Cloud Platform Engineer | **Cloud Platform Engineering** - Design and deploy production-ready AWS infrastructure for Twenty CRM, LiteLLM Proxy, or N8N with comprehensive DevOps practices and infrastructure as code. | 5-7 days |
+| [Pardus](pardus/README.md) | Cloud Platform Engineer | **Cloud Platform Engineering** - Design and deploy production-ready AWS infrastructure for Twenty CRM, LiteLLM Proxy, or N8N with comprehensive DevOps practices and infrastructure as code. | 3-5 days |
 | [Katt](katt/README.md) | Engineering Manager / Technical Project Manager | **EM/TPM Assessment** - Demonstrate leadership, technical decision-making, and project management skills through focused exercises including system design and stakeholder communication scenarios. Includes detailed materials and templates for 3-5 business day completion. | 3-5 days |
 | Felis | TBD | Reserved for future challenge | TBD |
 | Neko | TBD | Reserved for future challenge | TBD |
