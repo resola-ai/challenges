@@ -54,11 +54,80 @@ Your task is to develop a comprehensive set of Postman tests to validate the fun
 
 ### Evaluation Criteria:
 
-- Coverage: The extent to which the API endpoints are tested.
-- Correctness: The accuracy of the tests in validating API responses and handling edge cases.
-- Performance: The response times of the API endpoints are within acceptable limits.
-- Security: The API should not be vulnerable to basic security threats.
-- Automation: The degree to which the tests can be automated and integrated into a CI/CD pipeline.
-- Documentation: Clarity and completeness of the documentation.
+#### Test Coverage (30%):
+- **API Endpoint Coverage**: Complete testing of all available endpoints
+- **Edge Case Testing**: Comprehensive testing of error conditions and invalid inputs
+- **Data Validation**: Proper validation of request/response data structures
+- **Negative Testing**: Testing for failure scenarios and error handling
 
-Good luck, and happy testing!
+#### Test Quality (25%):
+- **Test Accuracy**: Correctness of test assertions and expected outcomes
+- **Test Reliability**: Consistent and repeatable test execution
+- **Test Maintainability**: Well-organized and documented test collection
+- **Automation**: Effective use of Postman automation features
+
+#### Performance Testing (20%):
+- **Response Time Validation**: Proper benchmarking and performance criteria
+- **Load Testing**: Testing under realistic load conditions
+- **Performance Metrics**: Meaningful performance measurements and reporting
+- **Baseline Establishment**: Clear performance benchmarks and thresholds
+
+#### Security Testing (15%):
+- **Vulnerability Testing**: Testing for common security vulnerabilities
+- **Authentication Testing**: Proper testing of authentication mechanisms
+- **Data Exposure Testing**: Verification of sensitive data protection
+- **Security Best Practices**: Implementation of security testing methodologies
+
+#### Documentation & Reporting (10%):
+- **Test Documentation**: Clear documentation of testing approach and strategy
+- **Test Reports**: Comprehensive and actionable test reports
+- **Setup Instructions**: Clear instructions for test execution
+- **Code Quality**: Clean, well-structured test collection
+
+## Timeline:
+
+This challenge is designed to be completed in **2-3 business days**:
+
+#### **Day 1: API Analysis & Test Planning**
+- Review API documentation thoroughly
+- Create test strategy and plan
+- Set up Postman environment and variables
+
+#### **Day 2: Test Implementation**
+- Create Postman collection
+- Implement functional tests for all endpoints
+- Add performance and security tests
+
+#### **Day 3: Automation & Documentation**
+- Set up automation with Collection Runner
+- Generate test reports
+- Complete documentation and final review
+
+## Priority Focus Areas:
+
+#### **Must Complete (High Priority):**
+- Functional testing of all API endpoints
+- Basic performance testing with response time validation
+- Security testing for common vulnerabilities
+- Test automation with Postman Collection Runner
+- Basic test documentation and reporting
+
+#### **Should Complete (Medium Priority):**
+- Comprehensive edge case testing
+- Advanced performance testing with load simulation
+- Detailed security vulnerability assessment
+- Test environment configuration and variables
+- Integration with CI/CD pipeline
+
+#### **Nice to Have (Low Priority):**
+- Advanced test reporting with custom dashboards
+- Performance benchmarking with detailed metrics
+- Comprehensive security testing suite
+- Test data management and cleanup
+- Advanced Postman scripting and automation
+
+## Questions?
+
+Any questions you may have, please contact us by e-mail.
+
+Good luck! 🚀

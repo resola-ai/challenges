@@ -115,18 +115,82 @@ WS     /api/v1/logs/stream            # Real-time log streaming
 
 ### Evaluation Criteria:
 
-- **Code Quality**: Clean, maintainable, and well-structured code
+#### Code Quality & Architecture (30%):
+- **Code Structure**: Clean, maintainable, and well-structured code
 - **API Design**: RESTful principles, proper error handling, validation
-- **Performance**: Efficient database queries, caching, and optimization
-- **Security**: Proper authentication, authorization, and data protection
-- **Testing**: Comprehensive test coverage and quality
-- **Documentation**: Clear and complete documentation
-- **Problem Solving**: Ability to handle complex requirements efficiently
-- **Technical Decisions**: Justification of technology choices
+- **Database Design**: Efficient schema design and query optimization
+- **Technical Decisions**: Justification of technology choices and architecture
+
+#### Performance & Scalability (25%):
+- **High Throughput**: Ability to handle 1000+ log entries per second
+- **Low Latency**: Sub-100ms response times for search queries
+- **Caching Strategy**: Effective use of Redis and other caching mechanisms
+- **Database Optimization**: Efficient indexes and query performance
+
+#### Security & Compliance (20%):
+- **Authentication**: Proper JWT-based authentication implementation
+- **Authorization**: Role-based access control and fine-grained permissions
+- **Data Protection**: Encryption at rest and in transit
+- **Input Validation**: Proper sanitization and validation of all inputs
+
+#### Testing & Documentation (15%):
+- **Test Coverage**: >85% code coverage with comprehensive testing
+- **API Documentation**: Complete OpenAPI/Swagger documentation
+- **Setup Instructions**: Clear deployment and configuration guide
+- **Code Documentation**: Inline comments and comprehensive docstrings
+
+#### Problem Solving & Innovation (10%):
+- **Complex Requirements**: Ability to handle complex requirements efficiently
+- **Creative Solutions**: Innovative approaches to technical challenges
+- **Bonus Features**: Implementation of optional advanced features
+- **Performance Optimization**: Creative solutions for performance challenges
 
 ## Timeline:
 
-This challenge is designed to be completed in **24 hours to 1 week** depending on the candidate's experience level. Focus on delivering a working MVP with core features rather than implementing all bonus features.
+This challenge is designed to be completed in **3-5 business days**:
+
+#### **Days 1-2: Core API Development**
+- Set up project structure and technology stack
+- Implement core audit log management features
+- Design and implement database schema
+- Create basic API endpoints
+
+#### **Days 3-4: Advanced Features & Testing**
+- Implement search, filtering, and export functionality
+- Add real-time streaming capabilities
+- Implement security and authentication
+- Create comprehensive test suite
+
+#### **Day 5: Documentation & Final Review**
+- Complete API documentation
+- Create architecture diagrams
+- Final testing and optimization
+- Prepare submission materials
+
+Focus on delivering a working MVP with core features rather than implementing all bonus features.
+
+## Priority Focus Areas:
+
+#### **Must Complete (High Priority):**
+- Core audit log creation and retrieval API endpoints
+- Basic search and filtering functionality
+- Database schema design and implementation
+- Authentication and authorization system
+- Basic security controls and data validation
+
+#### **Should Complete (Medium Priority):**
+- Advanced search with full-text capabilities
+- Real-time log streaming via WebSocket
+- Data retention and archival policies
+- Performance optimization and caching
+- Comprehensive test coverage
+
+#### **Nice to Have (Low Priority):**
+- Export functionality (JSON, CSV)
+- Dashboard and visualization interface
+- Advanced analytics and reporting
+- Multi-tenancy support
+- Alert system for log patterns
 
 ## Questions?
 
