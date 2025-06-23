@@ -75,9 +75,9 @@ You will deploy and secure **Twenty CRM** - an open-source CRM application built
 graph TB
     Internet[Internet]
     ALB[ALB + WAF]
-    TwentyCRM[Twenty CRM<br/>(Docker)]
-    CloudWatch[CloudWatch<br/>Logging]
-    PostgreSQL[PostgreSQL<br/>Database]
+    TwentyCRM[Twenty CRM Docker]
+    CloudWatch[CloudWatch Logging]
+    PostgreSQL[PostgreSQL Database]
     
     Internet --> ALB
     ALB --> TwentyCRM
