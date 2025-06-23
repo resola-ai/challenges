@@ -23,8 +23,8 @@ Your company's e-commerce platform is experiencing performance issues after a 3Ã
 - **Success Metrics** (1 page): KPIs and monitoring approach
 
 #### Supporting Materials:
-- See `exercise1-materials.md` for detailed scenario, current architecture diagram, and requirements
-- See `exercise1-templates.md` for report templates and guidelines
+- See [Exercise 1 Materials](exercise1-materials.md) for detailed scenario, current architecture diagram, and requirements
+- See [Exercise 1 Templates](exercise1-templates.md) for report templates and guidelines
 
 ### Exercise 2: Stakeholder Communication & Project Management (1-2 days)
 
@@ -39,8 +39,8 @@ A high-priority customer feature is behind schedule due to technical challenges.
 - **Communication Strategy** (1 page): Ongoing update and escalation plan
 
 #### Supporting Materials:
-- See `exercise2-materials.md` for detailed scenario, stakeholder profiles, and requirements
-- See `exercise2-templates.md` for presentation templates and communication guidelines
+- See [Exercise 2 Materials](exercise2-materials.md) for detailed scenario, stakeholder profiles, and requirements
+- See [Exercise 2 Templates](exercise2-templates.md) for presentation templates and communication guidelines
 
 ## Technical Requirements:
 
