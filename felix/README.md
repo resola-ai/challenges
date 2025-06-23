@@ -71,18 +71,18 @@ You will deploy and secure **Twenty CRM** - an open-source CRM application built
 ### Technical Requirements:
 
 #### Deployment Architecture:
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Internet      │    │   ALB + WAF     │    │   Twenty CRM    │
-│                 │───▶│                 │───▶│   (Docker)      │
-│                 │    │                 │    │                 │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-                                │                       │
-                                ▼                       ▼
-                       ┌─────────────────┐    ┌─────────────────┐
-                       │   CloudWatch    │    │   PostgreSQL    │
-                       │   Logging       │    │   Database      │
-                       └─────────────────┘    └─────────────────┘
+```mermaid
+graph TB
+    Internet[Internet]
+    ALB[ALB + WAF]
+    TwentyCRM[Twenty CRM<br/>(Docker)]
+    CloudWatch[CloudWatch<br/>Logging]
+    PostgreSQL[PostgreSQL<br/>Database]
+    
+    Internet --> ALB
+    ALB --> TwentyCRM
+    ALB --> CloudWatch
+    TwentyCRM --> PostgreSQL
 ```
 
 #### Technology Stack:

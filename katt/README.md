@@ -4,6 +4,40 @@
 
 Demonstrate your leadership, technical decision-making, and project management skills through focused exercises that simulate real-world engineering management scenarios. This challenge evaluates your ability to lead teams, make technical decisions, manage projects, and communicate effectively across stakeholders.
 
+## Assessment Overview
+
+This assessment evaluates your capabilities as an Engineering Manager or Technical Project Manager through three focused exercises that simulate real-world scenarios you would encounter in these roles.
+
+### Assessment Process:
+```mermaid
+graph TB
+    subgraph "Assessment Phases"
+        Phase1[Phase 1: Technical Leadership<br/>Exercise 1 - System Design]
+        Phase2[Phase 2: Project Management<br/>Exercise 2 - Stakeholder Communication]
+        Phase3[Phase 3: Leadership & Communication<br/>Exercise 3 - Team Leadership]
+    end
+    
+    subgraph "Deliverables"
+        Deliverable1[System Analysis Report<br/>Architecture Design<br/>Migration Plan]
+        Deliverable2[Stakeholder Communication Plan<br/>Risk Assessment<br/>Timeline Management]
+        Deliverable3[Team Leadership Strategy<br/>Communication Framework<br/>Success Metrics]
+    end
+    
+    subgraph "Evaluation Areas"
+        Tech[Technical Decision Making]
+        Project[Project Management]
+        Leadership[Leadership & Communication]
+    end
+    
+    Phase1 --> Deliverable1
+    Phase2 --> Deliverable2
+    Phase3 --> Deliverable3
+    
+    Deliverable1 --> Tech
+    Deliverable2 --> Project
+    Deliverable3 --> Leadership
+```
+
 ## Challenge Overview
 
 You will complete **two core exercises** that assess your capabilities as an Engineering Manager or Technical Project Manager. The assessment focuses on technical problem-solving and stakeholder communication in realistic scenarios.

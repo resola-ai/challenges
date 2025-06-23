@@ -82,6 +82,88 @@ DELETE /api/v1/logs/cleanup           # Cleanup old logs
 WS     /api/v1/logs/stream            # Real-time log streaming
 ```
 
+#### System Architecture:
+```mermaid
+graph TB
+    subgraph "Client Applications"
+        App1[Application 1]
+        App2[Application 2]
+        App3[Application 3]
+    end
+    
+    subgraph "Audit Log API"
+        API[API Gateway]
+        Auth[Authentication]
+        RateLimit[Rate Limiting]
+    end
+    
+    subgraph "Core Services"
+        LogService[Log Service]
+        SearchService[Search Service]
+        ExportService[Export Service]
+        StreamService[Stream Service]
+    end
+    
+    subgraph "Data Layer"
+        PostgreSQL[(PostgreSQL)]
+        Redis[(Redis Cache)]
+        Elasticsearch[(Elasticsearch)]
+    end
+    
+    subgraph "Background Services"
+        Celery[Celery Workers]
+        Cleanup[Data Cleanup]
+        Archive[Data Archival]
+    end
+    
+    App1 --> API
+    App2 --> API
+    App3 --> API
+    
+    API --> Auth
+    Auth --> RateLimit
+    RateLimit --> LogService
+    RateLimit --> SearchService
+    RateLimit --> ExportService
+    RateLimit --> StreamService
+    
+    LogService --> PostgreSQL
+    SearchService --> Elasticsearch
+    SearchService --> Redis
+    ExportService --> PostgreSQL
+    
+    Celery --> PostgreSQL
+    Cleanup --> PostgreSQL
+    Archive --> PostgreSQL
+```
+
+#### Audit Log Flow:
+```mermaid
+sequenceDiagram
+    participant Client as Client App
+    participant API as API Gateway
+    participant Auth as Auth Service
+    participant Log as Log Service
+    participant DB as PostgreSQL
+    participant Cache as Redis
+    participant Search as Elasticsearch
+    
+    Client->>API: POST /api/v1/logs
+    API->>Auth: Validate JWT Token
+    Auth-->>API: Token Valid
+    API->>Log: Create Log Entry
+    Log->>DB: Store Log Entry
+    Log->>Cache: Cache Recent Logs
+    Log->>Search: Index for Search
+    Log-->>API: Log Created
+    API-->>Client: 201 Created
+    
+    Note over Client,Search: Real-time Streaming
+    Client->>API: WS /api/v1/logs/stream
+    API->>Log: Subscribe to Stream
+    Log->>Client: Real-time Log Updates
+```
+
 ### Testing:
 
 - **Unit Tests**: >85% code coverage

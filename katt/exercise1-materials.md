@@ -12,21 +12,22 @@
 ### System Overview
 TechMart's e-commerce platform is built as a monolithic application with the following components:
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    TechMart E-commerce Platform             │
-│                     (Monolithic Architecture)               │
-├─────────────────────────────────────────────────────────────┤
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
-│  │   Frontend  │  │   Backend   │  │   Database  │         │
-│  │  (React)    │  │  (Node.js)  │  │ (PostgreSQL)│         │
-│  └─────────────┘  └─────────────┘  └─────────────┘         │
-│         │                │                │                │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
-│  │   Payment   │  │   Inventory │  │   Search    │         │
-│  │   Gateway   │  │  Management │  │   Engine    │         │
-│  └─────────────┘  └─────────────┘  └─────────────┘         │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+graph TB
+    subgraph "TechMart E-commerce Platform (Monolithic Architecture)"
+        Frontend[Frontend<br/>React]
+        Backend[Backend<br/>Node.js]
+        Database[Database<br/>PostgreSQL]
+        Payment[Payment Gateway]
+        Inventory[Inventory Management]
+        Search[Search Engine]
+    end
+    
+    Frontend <--> Backend
+    Backend <--> Database
+    Backend <--> Payment
+    Backend <--> Inventory
+    Backend <--> Search
 ```
 
 ### Current Performance Issues

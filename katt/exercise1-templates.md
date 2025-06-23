@@ -31,6 +31,54 @@
 - **Priority Ranking**: What to address first
 - **Success Criteria**: How to measure improvement
 
+### Report Structure Flow:
+```mermaid
+graph TD
+    Start[Start Analysis] --> ExecSummary[Executive Summary<br/>1 paragraph overview]
+    ExecSummary --> SystemAnalysis[Current System Analysis<br/>1 page detailed analysis]
+    SystemAnalysis --> DataAnalysis[Data Analysis<br/>1 page metrics & patterns]
+    DataAnalysis --> Recommendations[Recommendations<br/>1 page action plan]
+    Recommendations --> End[Complete Report]
+    
+    subgraph "Analysis Components"
+        Architecture[Architecture Overview]
+        Bottlenecks[Performance Bottlenecks]
+        RootCause[Root Cause Analysis]
+        Impact[Impact Assessment]
+    end
+    
+    subgraph "Data Components"
+        Metrics[Current Metrics]
+        Traffic[Traffic Patterns]
+        Resources[Resource Utilization]
+        Errors[Error Rates]
+        Business[Business Metrics]
+    end
+    
+    subgraph "Recommendation Components"
+        Immediate[Immediate Actions]
+        LongTerm[Long-term Strategy]
+        Priority[Priority Ranking]
+        Success[Success Criteria]
+    end
+    
+    SystemAnalysis --> Architecture
+    SystemAnalysis --> Bottlenecks
+    SystemAnalysis --> RootCause
+    SystemAnalysis --> Impact
+    
+    DataAnalysis --> Metrics
+    DataAnalysis --> Traffic
+    DataAnalysis --> Resources
+    DataAnalysis --> Errors
+    DataAnalysis --> Business
+    
+    Recommendations --> Immediate
+    Recommendations --> LongTerm
+    Recommendations --> Priority
+    Recommendations --> Success
+```
+
 ### Architecture Design Template
 
 **Proposed Solution Overview** (1 page)

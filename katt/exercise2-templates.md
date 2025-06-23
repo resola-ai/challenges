@@ -234,6 +234,89 @@ CloudFlow Inc.
 - **Customer Communication**: Template for customer updates
 - **Escalation Email**: Template for issue escalation
 
+### Stakeholder Communication Plan Template
+
+**Executive Summary** (1 paragraph)
+- Brief overview of the situation and communication challenge
+- Key stakeholders involved and their concerns
+- Main communication objectives
+
+**Stakeholder Analysis** (1 page)
+- **Stakeholder Mapping**: Identify all key stakeholders and their influence/interest
+- **Communication Preferences**: How each stakeholder prefers to receive information
+- **Key Concerns**: What each stakeholder is most worried about
+- **Decision Authority**: Who has the power to make decisions
+
+**Communication Strategy** (1 page)
+- **Message Tailoring**: How to adapt the message for different audiences
+- **Timing and Frequency**: When and how often to communicate
+- **Channels**: Which communication channels to use for each stakeholder
+- **Escalation Plan**: When and how to escalate issues
+
+**Implementation Plan** (1 page)
+- **Communication Timeline**: Specific dates and milestones
+- **Resource Requirements**: What's needed to execute the plan
+- **Success Metrics**: How to measure communication effectiveness
+- **Risk Mitigation**: How to handle communication challenges
+
+### Communication Structure:
+```mermaid
+graph TB
+    subgraph "Stakeholder Groups"
+        Executives[Executives<br/>CEO, CTO, VP Engineering]
+        Product[Product Team<br/>Product Manager, Design Lead]
+        Engineering[Engineering Team<br/>Tech Lead, Senior Engineers]
+        Business[Business Stakeholders<br/>Sales, Marketing, Customer Success]
+    end
+    
+    subgraph "Communication Channels"
+        Email[Email Updates]
+        Meetings[1:1 Meetings]
+        AllHands[All-Hands Meeting]
+        Slack[Slack Updates]
+        Docs[Documentation]
+    end
+    
+    subgraph "Message Types"
+        Status[Status Updates]
+        Technical[Technical Details]
+        Business[Business Impact]
+        Timeline[Timeline Changes]
+        Risks[Risks & Mitigation]
+    end
+    
+    subgraph "Communication Flow"
+        Analysis[Stakeholder Analysis]
+        Strategy[Communication Strategy]
+        Implementation[Implementation Plan]
+        Execution[Execute Plan]
+        Feedback[Gather Feedback]
+        Adjust[Adjust Strategy]
+    end
+    
+    Executives --> Email
+    Executives --> Meetings
+    Product --> Slack
+    Product --> Meetings
+    Engineering --> Slack
+    Engineering --> Docs
+    Business --> Email
+    Business --> AllHands
+    
+    Email --> Status
+    Meetings --> Technical
+    AllHands --> Business
+    Slack --> Timeline
+    Docs --> Risks
+    
+    Analysis --> Strategy
+    Strategy --> Implementation
+    Implementation --> Execution
+    Execution --> Feedback
+    Feedback --> Adjust
+    Adjust --> Strategy
+```
+
 ## Guidelines for Each Deliverable
 
 ### Executive Brief Guidelines

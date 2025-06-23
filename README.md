@@ -50,6 +50,42 @@ Our challenges are designed to assess different technical roles and skill levels
 - **Engineering Management**: Technical leadership, project management, stakeholder communication
 - **Technical Project Management**: System design, risk management, team coordination
 
+### Challenge Overview:
+```mermaid
+graph TB
+    subgraph "Development Challenges"
+        Puma[Puma<br/>QA/Testing Engineer<br/>API Testing with Postman]
+        Ocelot[Ocelot<br/>Backend Developer<br/>Audit Log API]
+        Felix[Felix<br/>Cloud Security Engineer<br/>Twenty CRM Security & Pen Testing]
+        Pardus[Pardus<br/>Cloud Platform Engineer<br/>Cloud Platform Engineering]
+    end
+    
+    subgraph "Leadership Challenges"
+        Katt[Katt<br/>Engineering Manager / TPM<br/>EM/TPM Assessment]
+    end
+    
+    subgraph "Future Challenges"
+        Felis[Felis<br/>TBD]
+        Neko[Neko<br/>TBD]
+        Kuma[Kuma<br/>TBD]
+        Mau[Mau<br/>TBD]
+        Mira[Mira<br/>TBD]
+    end
+    
+    subgraph "Role Focus Areas"
+        QA[Quality Assurance<br/>Testing & Security]
+        Backend[Backend Development<br/>API & Database]
+        Cloud[Cloud Engineering<br/>Infrastructure & DevOps]
+        Leadership[Leadership<br/>Management & Communication]
+    end
+    
+    Puma --> QA
+    Ocelot --> Backend
+    Felix --> Cloud
+    Pardus --> Cloud
+    Katt --> Leadership
+```
+
 ### Need Help?
 
 If you have questions about a specific challenge, please refer to the README in that challenge's directory first. For technical issues or clarifications, reach out to your contact at Resola.

@@ -4,27 +4,93 @@
 
 Design and implement a production-ready AWS infrastructure for one of three applications: Twenty CRM, LiteLLM Proxy, or N8N. This challenge assesses your ability to architect, deploy, and manage cloud infrastructure with modern DevOps practices and infrastructure as code.
 
-## Application Choices
+## Application Choices:
 
-You will choose **one** of the following applications to deploy:
+Choose **ONE** of the following applications to deploy:
 
-### Option 1: Twenty CRM
-- **Application**: Open-source CRM with customer management, deal tracking, and pipeline management
-- **Documentation**: [Twenty Docker Compose](https://twenty.com/developers/section/self-hosting/docker-compose)
-- **Key Features**: PostgreSQL database, file storage, RESTful API, React frontend
-- **Infrastructure Needs**: Container orchestration, database, file storage, load balancing
+#### Option 1: Twenty CRM
+- **Purpose**: Customer Relationship Management platform
+- **Technology**: React frontend, Node.js backend, PostgreSQL database
+- **Features**: Contact management, sales pipeline, analytics dashboard
+- **Complexity**: Medium (3 services: frontend, backend, database)
 
-### Option 2: LiteLLM Proxy
-- **Application**: Production-ready proxy server for managing multiple LLM providers
-- **Documentation**: [LiteLLM Docker Deployment](https://docs.litellm.ai/docs/proxy/deploy#deploy-with-database--redis)
-- **Key Features**: Multi-LLM provider support, PostgreSQL database, Redis caching, API management
-- **Infrastructure Needs**: Container orchestration, database, caching, API gateway, monitoring
+#### Option 2: LiteLLM Proxy
+- **Purpose**: Unified API gateway for multiple LLM providers
+- **Technology**: Python FastAPI, PostgreSQL, Redis
+- **Features**: Model routing, cost tracking, rate limiting
+- **Complexity**: Medium (3 services: API, database, cache)
 
-### Option 3: N8N
-- **Application**: Workflow automation platform with visual workflow builder
-- **Documentation**: [N8N Docker Installation](https://docs.n8n.io/hosting/installation/docker/)
-- **Key Features**: Workflow automation, database persistence, Redis caching, worker processes
-- **Infrastructure Needs**: Container orchestration, database, caching, worker scaling, queue management
+#### Option 3: N8N
+- **Purpose**: Workflow automation platform
+- **Technology**: Node.js, PostgreSQL, Redis
+- **Features**: Visual workflow builder, 200+ integrations
+- **Complexity**: High (4 services: web, worker, database, cache)
+
+#### Cloud Infrastructure Architecture:
+```mermaid
+graph TB
+    subgraph "Internet"
+        Users[End Users]
+    end
+    
+    subgraph "AWS Cloud"
+        subgraph "Edge Layer"
+            CloudFront[CloudFront CDN]
+            Route53[Route 53 DNS]
+            WAF[AWS WAF]
+        end
+        
+        subgraph "Application Layer"
+            ALB[Application Load Balancer]
+            ECS[ECS Fargate Cluster]
+            App1[Application Service]
+            App2[Worker Service]
+        end
+        
+        subgraph "Data Layer"
+            RDS[(RDS PostgreSQL)]
+            ElastiCache[(ElastiCache Redis)]
+            S3[S3 Storage]
+        end
+        
+        subgraph "Security & Monitoring"
+            IAM[IAM Roles]
+            KMS[KMS Encryption]
+            CloudWatch[CloudWatch]
+            Secrets[Secrets Manager]
+        end
+        
+        subgraph "CI/CD Pipeline"
+            CodeCommit[CodeCommit]
+            CodeBuild[CodeBuild]
+            CodeDeploy[CodeDeploy]
+        end
+    end
+    
+    Users --> CloudFront
+    CloudFront --> WAF
+    WAF --> ALB
+    ALB --> ECS
+    ECS --> App1
+    ECS --> App2
+    
+    App1 --> RDS
+    App1 --> ElastiCache
+    App1 --> S3
+    
+    App2 --> RDS
+    App2 --> ElastiCache
+    
+    IAM --> ECS
+    KMS --> RDS
+    KMS --> S3
+    CloudWatch --> ECS
+    Secrets --> ECS
+    
+    CodeCommit --> CodeBuild
+    CodeBuild --> CodeDeploy
+    CodeDeploy --> ECS
+```
 
 ## Requirements:
 
