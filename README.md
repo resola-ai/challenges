@@ -1,3 +1,8 @@
+> [!WARNING] **Repository archived**
+> This repository was automatically archived on **2026-02-26 15:39:30** UTC.
+> To request reactivation, contact the team in **#infra** or **#engineering** on Slack.
+> **Note:** Repositories archived for more than one year are subject to complete removal without further notice.
+
 # Resola Code Challenges
 
 This repository aggregates all code challenges used by Resola for candidate assessments.
